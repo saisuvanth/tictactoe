@@ -18,7 +18,7 @@ const router = createBrowserRouter([
     path: '/',
     element: <App />,
     loader: async () => {
-      return axios.get('http://localhost:3002/profile',
+      return axios.get(`${process.env.REACT_APP_BACKEND_URL}profile`,
         { headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` } }).then(res => {
           return res.data;
         })

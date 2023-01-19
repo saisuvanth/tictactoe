@@ -9,7 +9,7 @@ const useSocket = (room, updateCb) => {
 
 
 	useEffect(() => {
-		const newSocket = io('http://localhost:3002', {
+		const newSocket = io(`${process.env.REACT_APP_BACKEND_URL}`, {
 			auth: { id: user?._id }, transports: ['websocket']
 		});
 		newSocket.emit('join', roomId)
