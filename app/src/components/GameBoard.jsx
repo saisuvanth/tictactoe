@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { FaChevronLeft } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import Button from "../components/Button";
 import Container from "../components/Container";
@@ -18,6 +17,7 @@ const GameBoard = () => {
     setGameState(gameState);
   }, [gameState]);
 
+  // eslint-disable-next-line no-unused-vars
   const navigate = useNavigate();
   return (
     <Container>

@@ -5,7 +5,7 @@ import { AuthContext } from '../AuthContext';
 const useSocket = (room, updateCb) => {
 	const { user } = useContext(AuthContext);
 	const [socket, setSocket] = useState(null);
-	const [roomId, setRoomId] = useState(room);
+	const [roomId] = useState(room);
 
 
 	useEffect(() => {
@@ -21,6 +21,7 @@ const useSocket = (room, updateCb) => {
 			}
 		}
 
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [user, roomId]);
 
 	useEffect(() => {
@@ -31,6 +32,7 @@ const useSocket = (room, updateCb) => {
 					updateCb(data);
 			})
 
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [socket])
 
 	const updateBoard = (board) => {

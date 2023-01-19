@@ -3,7 +3,6 @@ import { IoIosArrowBack } from 'react-icons/io'
 import { useParams, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../AuthContext'
 import Board from '../components/Board'
-import Button from '../components/Button'
 import XPiece from '../components/XPiece'
 import useApi from '../hooks/useApi'
 import useSocket from '../hooks/useSocket'
@@ -31,6 +30,7 @@ const Game = () => {
 			console.log(id)
 			updateGame({ board: gameState.board, gameId: id }).then(res => console.log(res)).catch(err => console.log(err))
 		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [id])
 
 	const handleClick = (index) => {
