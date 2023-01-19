@@ -12,7 +12,7 @@ const Games = () => {
 		<div className='w-screen h-screen p-5'>
 			<div className="flex flex-col">
 				<div className='text-lg font-bold my-3 mb-5'>Your Games</div>
-				{user?.games.length === 0 ? (
+				{user?.games?.length === 0 ? (
 					<div className='flex flex-col text-7xl text-center font-home my-12 mt-32'>
 						<p>No Games</p>
 						<p>Found</p>
@@ -21,7 +21,7 @@ const Games = () => {
 				{user?.games?.map((game, index) => (
 					<Card key={index} game={game} player={game?.player1._id === user._id ? 'p1' : 'p2'} />
 				))}
-				{user?.games.length === 0 ?
+				{user?.games?.length === 0 ?
 					<div className='w-full'>
 						<Link to={'/start-game'}>
 							<Button variant={'warning'} text={'Start a new game'} />

@@ -35,11 +35,11 @@ const Card = ({ game, player }) => {
 	return (
 		<div className='flex flex-col mb-3 p-4 rounded-lg box'>
 			<div className='text-2xl font-semibold'>
-				Game with {player === 'p1' ? game?.player1.name : game?.player2.name}
+				Game with {player === 'p1' ? game?.player2.name : game?.player1.name}
 			</div>
 			<div className='flex flex-col'>
 				<div>
-					{checkWin(game.status, player) ? 'You won!' : checkLoss(game.status, player) ? 'You lose :(' : turnCheck(game.status, player) ? 'Your turn' : 'Opponent\'s turn'}
+					{checkWin(game.status, player) ? 'You won!' : checkLoss(game.status, player) ? 'You lose :(' : game.status === 'draw' ? 'Draw' : turnCheck(game.status, player) ? 'Your turn' : 'Opponent\'s turn'}
 				</div>
 				<div>
 					{ }

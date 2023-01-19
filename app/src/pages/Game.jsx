@@ -48,7 +48,7 @@ const Game = () => {
 					<IoIosArrowBack size={30} onClick={() => navigate(-1)} />
 				</div>
 				<div className='flex flex-col m-2 h-full'>
-					<p className='text-2xl font-bold'>Game with Rookie</p>
+					<p className='text-2xl font-bold'>Game with {player === 1 ? gameState?.player2.name : gameState?.player1.name}</p>
 					<div className='mb-8'>
 						<p className='text-gray-500'>Your Piece</p>
 						<XPiece sz={50} />

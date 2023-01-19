@@ -13,7 +13,7 @@ const Board = ({ gameState, handleClick, player }) => {
 		<div className='flex flex-col bg-yellow-200'>
 			<div className='my-2 text-base font-semibold text-center'>
 				{ }
-				{gameState?.status === 'p1turn' && player === 1 ? 'Your Move' : gameState?.status === 'p2turn' && player === 2 ? 'Your Move' : gameState?.status === 'p1won' ? player === 1 ? 'You Won' : 'You Lost' : gameState?.status === 'p2won' ? player === 2 ? 'You Won' : 'You Lost' : gameState?.status === 'draw' ? 'Draw' : 'Waiting for Opponent\'n'}
+				{gameState?.status === 'p1turn' && player === 1 ? 'Your Move' : gameState?.status === 'p2turn' && player === 2 ? 'Your Move' : gameState?.status === 'p1won' ? player === 1 ? 'You Won' : 'You Lost' : gameState?.status === 'p2won' ? player === 2 ? 'You Won' : 'You Lost' : gameState?.status === 'draw' ? 'It\'s a Draw' : 'Their move'}
 			</div>
 			<div className='grid gap-1.5 grid-flow-row grid-cols-3'>
 				{gameState?.board?.map((state, index) => (
