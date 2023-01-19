@@ -27,7 +27,7 @@ const Games = () => {
 							<Button variant={'warning'} text={'Start a new game'} />
 						</Link>
 					</div>
-					: <div className='absolute bottom-3 right-3 p-2'>
+					: <div className='fixed bottom-3 right-3 p-3'>
 						<Link to={'/start-game'} className='bg-slate-800 text-white p-3 rounded-lg flex items-center'>
 							<AiOutlinePlus className='inline-block mr-2' />
 							<button>New Game</button>
